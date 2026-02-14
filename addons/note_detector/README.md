@@ -42,8 +42,19 @@ func on_note_started(event: NoteDetectEvent) -> void:
   print("Note detected: ", event.note_name)
 ```
 
-### NoteDetector Node
-#### Properties
+### Detection Algorithm
+
+The addon uses autocorrelation by default. This is a fast and simple algorithm that works well for most instruments, but may pick up silence and noise as notes.
+You can optionally use YIN, which might be better for voice, wind instruments, etc.
+
+```gdscript
+PitchDetectorServer.algorithm = PitchDetectorServer.Algorithm.YIN
+```
+
+Read more: https://www.hyuncat.com/blog/yin/
+
+## API
+#### Node Properties
 - `threshold`: The duration (in milliseconds) a note has to be sustained before the detection signal is emitted.
 - `release`: The duration (in milliseconds) a note has to be released before the detection signal is emitted.
 - `grace_period`: The duration (in milliseconds) a note can be "not detected" during buildup before the buildup is cancelled.
@@ -61,15 +72,3 @@ func on_note_started(event: NoteDetectEvent) -> void:
 - `note_full_name`: The full name of the note (e.g. "C#3", "D4", etc.).
 - `note_index`: The index of the note (0 = C0, 1 = C#0, 12 = C1, etc.).
 - `note_octave`: The octave of the note (0 = C0, 1 = C1, etc.).
-
-### PitchDetectorServer
-
-The `PitchDetectorServer` is an autoload that handles pitch detection in Hz. It is added to your project when you enable the addon.
-
-The server uses autocorrelation by default for quick and simple detection. You can optionally use YIN, which might better for voice, wind instruments, etc.
-
-```gdscript
-PitchDetectorServer.algorithm = PitchDetectorServer.Algorithm.YIN
-```
-
-Read more: https://www.hyuncat.com/blog/yin/
