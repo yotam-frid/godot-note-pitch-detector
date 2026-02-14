@@ -44,6 +44,8 @@ func on_note_started(event: NoteDetectEvent) -> void:
 
 ### Detection Algorithm
 
+Note detection is always *monophonic*, meaning it only detects one note at a time.
+
 The addon uses autocorrelation by default. This is a fast and simple algorithm that works well for most instruments, but may pick up silence and noise as notes.
 You can optionally use YIN, which might be better for voice, wind instruments, etc.
 
