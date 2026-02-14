@@ -4,7 +4,7 @@ Adds a `NoteDetector` node that detects and emits signals when notes are played 
 
 Useful for creating musical games, interactive toys, visualizers, etc.
 
-![Inspector Screenshot](../../screenshot.png)
+![Inspector Screenshot](../../images/screenshot.png)
 
 ## Prerequisites
 
