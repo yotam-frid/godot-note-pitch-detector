@@ -1,0 +1,1 @@
+addons/note_detector/LICENSE.md
