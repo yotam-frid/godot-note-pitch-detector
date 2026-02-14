@@ -20,12 +20,12 @@ Make sure to select the audio input device you want to use.
 By default, the addon selects the system's default audio input device (device 0).
 
 ```gdscript
-# Get a list of available audio devices
-# You can put this in a UI to allow device selection
+# Get a list of strings representing the available audio devices
+# You can put this in a UI to allow the user to select the input device
 var devices = AudioServer.get_input_device_list()
 
-# Set the audio input device to the first device
-AudioServer.input_device = devices[0] # Use the first device
+# Set the audio input device
+AudioServer.input_device = devices[0]
 ```
 
 ## Usage
