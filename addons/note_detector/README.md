@@ -1,8 +1,10 @@
-# Godot Note Pitch Detector
+# Godot Note Pitch Detector Addon ♪
 
 Adds a `NoteDetector` node that detects and emits signals when notes are played from the microphone.
 
 Useful for creating musical games, interactive toys, visualizers, etc.
+
+![Inspector Screenshot](../../screenshot.png)
 
 ## Prerequisites
 
