@@ -4,7 +4,7 @@ Adds a `NoteDetector` node that emits signals when it detects musical notes from
 
 Useful for creating musical games, interactive toys, visualizers, etc.
 
-![Inspector Screenshot](../../images/screenshot.png)
+![Inspector Screenshot](https://github.com/yotam-frid/godot-note-pitch-detector/blob/main/images/screenshot.png?raw=true)
 
 ## Prerequisites
 
