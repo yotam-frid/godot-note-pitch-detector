@@ -10,14 +10,14 @@ Useful for creating musical games, interactive toys, visualizers, etc.
 
 Enable the addon in the project settings:
 
-`Project Settings > Addons > Note Pitch Detector > Enable`
+`Project Settings > Plugins > Enable 'Note Pitch Detector'`
 
 You also need to enable audio input:
 
 `Project Settings > Audio > Driver > Enable Audio Input`
 
 Make sure to select the audio input device you want to use.
-The addon selects the system default (device 0) by default.
+By default, the addon selects the system's default audio input device (device 0).
 
 ```gdscript
 # Get a list of available audio devices
